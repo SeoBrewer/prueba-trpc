@@ -1,10 +1,6 @@
-// Default Import Statements
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.scss";
-
-// Add the following Import Statements
 
 import {useState} from "react";
 
@@ -13,21 +9,35 @@ import {httpBatchLink} from "@trpc/client";
 import AppComponent from "./AppComponent";
 import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 
-import "./index.scss";
-
 const client = new QueryClient();
 
-const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: client-side</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Tailwind</div>
-  </div>
-);
 const rootElement = document.getElementById("app");
 if (!rootElement) throw new Error("Failed to find the root element");
 
-const root = ReactDOM.createRoot(rootElement as HTMLElement);
+const root = ReactDOM.createRoot(rootElement);
+
+const App = () => {
+  const [trpcClient] = useState(() =>
+    trpc.createClient({
+      links: [
+        httpBatchLink({
+          // Base URL
+          url: "http://localhost:3005/api/",
+        }),
+      ],
+    })
+  );
+
+  return (
+    // tRPC Provider
+    <trpc.Provider client={trpcClient} queryClient={client}>
+      {/* React Query Provider */}
+      <QueryClientProvider client={client}>
+        {/* HTML React Component */}
+        <AppComponent />
+      </QueryClientProvider>
+    </trpc.Provider>
+  );
+};
 
 root.render(<App />);
