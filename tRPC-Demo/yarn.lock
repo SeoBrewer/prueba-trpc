@@ -1011,6 +1011,28 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
+"@tanstack/query-core@5.59.16":
+  version "5.59.16"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.59.16.tgz#aa4616e8a9c12afeef4cfbf3ed0f55f404d66e67"
+  integrity sha512-crHn+G3ltqb5JG0oUv6q+PMz1m1YkjpASrXTU+sYWW9pLk0t2GybUHNRqYPZWhxgjPaVGC4yp92gSFEJgYEsPw==
+
+"@tanstack/react-query@^5.59.16":
+  version "5.59.16"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.59.16.tgz#1e701c6e6681965c04aa426df9da54b8edc6db1b"
+  integrity sha512-MuyWheG47h6ERd4PKQ6V8gDyBu3ThNG22e1fRVwvq6ap3EqsFhyuxCAwhNP/03m/mLg+DAb0upgbPaX6VB+CkQ==
+  dependencies:
+    "@tanstack/query-core" "5.59.16"
+
+"@trpc/client@^10.45.2":
+  version "10.45.2"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.45.2.tgz#15f9ba81303bf3417083fc6bb742e4e86b49da90"
+  integrity sha512-ykALM5kYWTLn1zYuUOZ2cPWlVfrXhc18HzBDyRhoPYN0jey4iQHEFSEowfnhg1RvYnrAVjNBgHNeSAXjrDbGwg==
+
+"@trpc/react-query@^10.45.2":
+  version "10.45.2"
+  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.45.2.tgz#22564b370a1fb8920ba3a1554f4149a151039198"
+  integrity sha512-BAqb9bGZIscroradlNx+Cc9522R+idY3BOSf5z0jHUtkxdMbjeGKxSSMxxu7JzoLqSIEC+LVzL3VvF8sdDWaZQ==
+
 "@trpc/server@^10.45.2":
   version "10.45.2"
   resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.45.2.tgz#5f2778c4810f93b5dc407146334f8da70a0b51fb"
